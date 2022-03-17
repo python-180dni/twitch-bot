@@ -5,4 +5,4 @@ settings = Settings('config.cfg')
 if not settings.exists:
     raise FileExistsError(f"File {settings.path} not exists")
 
-print(settings.server, settings.port, settings.token, settings.nickname, settings.channel, sep='\n')
+print(settings.server, settings.port, settings.token, settings.nickname, settings.channel, sep='\n') # just testing if it read value correctly from file
