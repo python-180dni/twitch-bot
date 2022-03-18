@@ -19,7 +19,7 @@ class Settings:
 
     def get_port(self):
         with open(self.path, 'r') as file:
-            return file.readlines()[2].split('= ')[-1].rstrip()
+            return int(file.readlines()[2].split('= ')[-1].rstrip())
 
     def get_token(self):
         with open(self.path, 'r') as file:
