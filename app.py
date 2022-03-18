@@ -13,5 +13,6 @@ socket.send(f"PASS {settings.token}\n".encode('utf-8')) # Passes token to socket
 socket.send(f"NICK {settings.nickname}\n".encode('utf-8')) # Passes nickname to socket
 socket.send(f"JOIN {settings.channel}\n".encode('utf-8')) # Passes channel name to socket
 
-message = socket.recv(4096).decode('utf-8')
-print(message)
+while True:
+    message = socket.recv(4096).decode('utf-8').rstrip()
+    print(message)

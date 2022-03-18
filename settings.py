@@ -31,4 +31,4 @@ class Settings:
 
     def get_channel(self):
         with open(self.path, 'r') as file:
-            return file.readlines()[5].split('= ')[-1].rstrip()
+            return '#' + file.readlines()[5].split('= ')[-1].rstrip()
